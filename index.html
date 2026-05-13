@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Claes-Philip Staiger — Lead Architect & AI Developer</title>
-<meta name="description" content="Claes-Philip Staiger — Lead Architect & AI Developer. Architecture, AI, system and app development. Stockholm / Visby." />
+<title>Claes-Philip Staiger — Lead Architect &amp; AI Developer</title>
+<meta name="description" content="Claes-Philip Staiger — Lead Architect & AI Developer. Architecture, AI, system and app development. Visby / Stockholm." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,16 +29,30 @@
 </script>
 <style>
   html, body { background: #F3ECDF; color: #1A1A1A; }
-  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; font-feature-settings: "ss01","cv11"; }
   .page-edge { box-shadow: inset 6px 0 0 0 #6FB496; }
   .card { background: #EBE3D0; border-left: 5px solid #34493F; }
-  .eyebrow { color: #A87836; letter-spacing: .14em; font-weight: 700; text-transform: uppercase; font-size: 12px; }
-  .pill { background: #D5DCC9; color: #34493F; }
+  .eyebrow { color: #A87836; letter-spacing: .16em; font-weight: 700; text-transform: uppercase; font-size: 12px; }
+  .pill { background: #D5DCC9; color: #34493F; font-size: 13px; }
   .dashed { border-top: 1px dashed #34493F; opacity: .55; }
   a.link { color: #34493F; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
   a.link:hover { text-decoration-thickness: 2px; }
   .lang-active { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
-  .dot { width: 8px; height: 8px; border-radius: 9999px; background: #34493F; display: inline-block; }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 9999px;
+    background-color: #6FB496;
+    background-image: url('avatar.jpeg');
+    background-size: cover;
+    background-position: 32% 38%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 2px #F3ECDF, 0 0 0 3px rgba(52,73,63,0.15);
+    filter: saturate(1.02);
+  }
+  h1 { letter-spacing: -0.02em; }
+  .lead { font-size: clamp(20px, 2.2vw, 24px); line-height: 1.35; }
+  .body { font-size: 15px; line-height: 1.65; }
+  .body-sm { font-size: 14px; line-height: 1.6; }
+  .role-title { font-size: 16px; }
   @media print {
     .page-edge { box-shadow: none; }
     .no-print { display: none !important; }
@@ -47,263 +61,263 @@
 </style>
 </head>
 <body class="page-edge">
-<main class="mx-auto max-w-[1180px] px-8 lg:px-16 py-14">
+<main class="mx-auto max-w-[1120px] px-8 lg:px-16 py-14">
 
   <!-- HEADER -->
   <header class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
-    <div class="flex items-start gap-5">
-      <div class="shrink-0 w-16 h-16 rounded-full bg-mint flex items-center justify-center text-cream font-extrabold text-xl tracking-wide" aria-hidden="true">CP</div>
-      <div>
-        <h1 class="font-extrabold leading-[1.02] tracking-tight text-[44px] sm:text-[56px] lg:text-[68px]">Claes-Philip Staiger</h1>
-        <p class="mt-3 text-lg sm:text-xl text-ink/80">Lead Architect &amp; AI Developer · Architecture, AI, System &amp; App Development</p>
+    <div class="flex items-start gap-5 min-w-0">
+      <div class="avatar shrink-0" aria-hidden="true"></div>
+      <div class="min-w-0">
+        <h1 class="font-extrabold leading-[1.05] text-[40px] sm:text-[48px] lg:text-[56px]">Claes-Philip Staiger</h1>
+        <p class="mt-2 text-[17px] sm:text-[18px] text-ink/75">Lead Architect &amp; AI Developer · Architecture, AI, system &amp; app development</p>
       </div>
     </div>
-    <nav class="text-sm sm:text-base text-ink/85 lg:text-right space-y-1.5">
-      <div class="space-x-4 no-print">
+    <nav class="text-[13.5px] text-ink/85 lg:text-right space-y-1 shrink-0">
+      <div class="space-x-4 no-print mb-1.5">
         <a href="/" class="lang-active">EN</a>
         <a href="/sv.html" class="link">SV</a>
       </div>
       <div><a class="link" href="mailto:claes-philip@staiger.se">claes-philip@staiger.se</a></div>
       <div><a class="link" href="tel:+46766555005">+46 766 555 005</a></div>
       <div><a class="link" href="https://linkedin.com/in/claesphilipstaiger" target="_blank" rel="noopener">linkedin.com/in/claesphilipstaiger</a></div>
-      <div class="text-ink/70"><a class="link" href="https://claes-philip.staiger.se" target="_blank" rel="noopener">claes-philip.staiger.se</a> · Stockholm / Visby</div>
+      <div class="text-ink/70 whitespace-nowrap"><a class="link" href="https://claes-philip.staiger.se" target="_blank" rel="noopener">claes-philip.staiger.se</a> · Visby / Stockholm</div>
     </nav>
   </header>
 
-  <hr class="mt-10 border-t border-forest/25" />
+  <hr class="mt-9 border-t border-forest/25" />
 
   <!-- PILLS -->
-  <section class="mt-8 flex flex-wrap gap-2.5 text-sm">
-    <span class="pill inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-medium">
+  <section class="mt-7 flex flex-wrap gap-2 text-sm">
+    <span class="pill inline-flex items-center gap-2 rounded-full px-3 py-1.5 font-medium">
       <span class="w-2 h-2 rounded-full bg-forest"></span> Available now
     </span>
-    <span class="pill rounded-full px-3.5 py-1.5 font-medium">1–3 days / week</span>
-    <span class="pill rounded-full px-3.5 py-1.5 font-medium">Stockholm or remote</span>
-    <span class="pill rounded-full px-3.5 py-1.5 font-medium">EN · SV</span>
-    <span class="pill rounded-full px-3.5 py-1.5 font-medium">Swedish ltd. — invoice-ready</span>
-    <span class="pill rounded-full px-3.5 py-1.5 font-medium">EU-hosted, data stays yours</span>
+    <span class="pill rounded-full px-3 py-1.5 font-medium">1–3 days / week</span>
+    <span class="pill rounded-full px-3 py-1.5 font-medium">Visby / Stockholm or remote</span>
+    <span class="pill rounded-full px-3 py-1.5 font-medium">EN · SV</span>
+    <span class="pill rounded-full px-3 py-1.5 font-medium">Swedish ltd. — invoice-ready</span>
+    <span class="pill rounded-full px-3 py-1.5 font-medium">EU-hosted, data stays yours</span>
   </section>
 
   <!-- LEAD -->
-  <section class="mt-10 max-w-4xl">
-    <p class="text-[26px] sm:text-[28px] leading-snug font-medium">
-      I help organisations <strong class="font-extrabold">ship useful technology</strong> — architectures that actually get built, AI features that survive Monday morning, and the strategy &amp; workflow that connect business, teams and code.
+  <section class="mt-9 max-w-4xl">
+    <p class="lead font-medium">
+      I help organisations <strong class="font-extrabold">ship useful technology</strong> — architectures that actually get built, AI features that survive Monday morning, and the strategy and workflow that connect business, teams and code.
     </p>
-    <p class="mt-6 text-base sm:text-lg text-ink/80 leading-relaxed">
-      20+ years across solution, enterprise and integration architecture, with hands-on system and app development, modern AI (LLMs, RAG, agents) and the development workflows that make teams faster. I'm comfortable in the boardroom and in the codebase — and I prefer to be in both on the same day.
+    <p class="mt-5 body text-ink/85">
+      Twenty years across solution, enterprise and integration architecture, with hands-on system and app development and modern AI — LLMs, RAG and agents. I'm known for turning complex problems into <strong class="font-semibold">simple, durable solutions</strong>, and for explaining and visualising them so business, technology and operations stay on the same page. Comfortable across roles and audiences — from boardroom to codebase, often on the same day.
     </p>
   </section>
 
   <!-- THREE THINGS -->
-  <section class="mt-14">
+  <section class="mt-12">
     <h2 class="eyebrow">Three things I bring to the table</h2>
-    <div class="mt-5 grid md:grid-cols-3 gap-5">
+    <div class="mt-4 grid md:grid-cols-3 gap-5">
       <article class="card p-6 rounded-sm">
-        <div class="text-forest/70 font-semibold text-sm">01</div>
-        <h3 class="mt-2 text-xl font-extrabold">Architecture &amp; Systems</h3>
-        <p class="mt-2 font-semibold text-ink/90">"Target architectures that actually ship."</p>
-        <p class="mt-2 text-ink/80 text-[15px] leading-relaxed">20+ years as solution, enterprise and integration architect. Stakeholder discovery, target architecture, ADRs, integration and API plans — designed so the team can build them.</p>
+        <div class="text-forest/70 font-semibold text-xs tracking-widest">01</div>
+        <h3 class="mt-1.5 text-lg font-extrabold">Architecture &amp; systems</h3>
+        <p class="mt-1.5 text-[14px] font-semibold text-ink/90">Target architectures that actually ship.</p>
+        <p class="mt-2 body-sm text-ink/80">Two decades as solution, enterprise and integration architect. Stakeholder discovery, target architecture, ADRs and integration plans — designed so the team can build them.</p>
       </article>
       <article class="card p-6 rounded-sm">
-        <div class="text-forest/70 font-semibold text-sm">02</div>
-        <h3 class="mt-2 text-xl font-extrabold">AI &amp; Development</h3>
-        <p class="mt-2 font-semibold text-ink/90">"Hands-on builder, not a deck-holder."</p>
-        <p class="mt-2 text-ink/80 text-[15px] leading-relaxed">LLMs, RAG, agents, C#/.NET, TypeScript, Python, React / Next.js. AI-assisted development with Claude Code, Cursor and MCP. I write the code, not just the slides.</p>
+        <div class="text-forest/70 font-semibold text-xs tracking-widest">02</div>
+        <h3 class="mt-1.5 text-lg font-extrabold">AI &amp; development</h3>
+        <p class="mt-1.5 text-[14px] font-semibold text-ink/90">Hands-on builder, not a deck-holder.</p>
+        <p class="mt-2 body-sm text-ink/80">LLMs, RAG, agents, C#/.NET, TypeScript, Python, React and Next.js. AI-assisted development with Claude Code, Cursor and MCP. I write the code, not just the slides.</p>
       </article>
       <article class="card p-6 rounded-sm">
-        <div class="text-forest/70 font-semibold text-sm">03</div>
-        <h3 class="mt-2 text-xl font-extrabold">Strategy &amp; Workflow</h3>
-        <p class="mt-2 font-semibold text-ink/90">"From vision to operating model."</p>
-        <p class="mt-2 text-ink/80 text-[15px] leading-relaxed">Tech and AI strategy, development workflows, automation and the team rhythm that turns intent into shipped software.</p>
+        <div class="text-forest/70 font-semibold text-xs tracking-widest">03</div>
+        <h3 class="mt-1.5 text-lg font-extrabold">Strategy &amp; communication</h3>
+        <p class="mt-1.5 text-[14px] font-semibold text-ink/90">From vision to operating model.</p>
+        <p class="mt-2 body-sm text-ink/80">Tech and AI strategy, development workflows and the visualisations that align executives, product and engineering around one shared picture.</p>
       </article>
     </div>
   </section>
 
   <!-- HOW TO HIRE -->
-  <section class="mt-16">
+  <section class="mt-12">
     <h2 class="eyebrow">How to hire me — three ways in</h2>
-    <div class="mt-5 grid md:grid-cols-3 gap-5">
+    <div class="mt-4 grid md:grid-cols-3 gap-5">
 
       <article class="card p-6 rounded-sm flex flex-col">
-        <div class="text-forest/70 font-semibold text-sm">Package 01</div>
-        <h3 class="mt-2 text-xl font-extrabold">Architecture Sprint</h3>
-        <p class="mt-1 text-ink/70 text-sm">2–3 weeks, fixed scope</p>
-        <ul class="mt-4 space-y-2 text-[15px] text-ink/85 leading-relaxed list-disc pl-5">
-          <li>Stakeholder discovery &amp; landscape mapping</li>
-          <li>Target architecture &amp; ADRs</li>
-          <li>Integration &amp; API plan</li>
-          <li>Risk &amp; sequencing</li>
+        <div class="text-forest/70 font-semibold text-xs tracking-widest">Package 01</div>
+        <h3 class="mt-1.5 text-lg font-extrabold">Architecture Sprint</h3>
+        <p class="mt-1 text-ink/65 text-[13px]">2–3 weeks, fixed scope</p>
+        <ul class="mt-4 space-y-1.5 body-sm text-ink/85 list-disc pl-5 marker:text-forest/60">
+          <li>Stakeholder discovery and landscape mapping</li>
+          <li>Target architecture and ADRs</li>
+          <li>Integration and API plan</li>
+          <li>Risk and sequencing</li>
         </ul>
         <div class="dashed my-5"></div>
-        <p class="text-sm"><span class="eyebrow">Outcome:</span> <span class="ml-1">blueprint your team builds from.</span></p>
+        <p class="text-[13px]"><span class="eyebrow">Outcome</span> <span class="ml-1 text-ink/85">— a blueprint your team builds from.</span></p>
       </article>
 
       <article class="card p-6 rounded-sm flex flex-col">
-        <div class="text-forest/70 font-semibold text-sm">Package 02</div>
-        <h3 class="mt-2 text-xl font-extrabold">AI Product Pilot</h3>
-        <p class="mt-1 text-ink/70 text-sm">4–6 weeks, working pilot</p>
-        <ul class="mt-4 space-y-2 text-[15px] text-ink/85 leading-relaxed list-disc pl-5">
-          <li>Use-case scoping &amp; eval</li>
-          <li>RAG / agent build</li>
-          <li>API + UI integration</li>
-          <li>Handover &amp; enablement</li>
+        <div class="text-forest/70 font-semibold text-xs tracking-widest">Package 02</div>
+        <h3 class="mt-1.5 text-lg font-extrabold">AI Product Pilot</h3>
+        <p class="mt-1 text-ink/65 text-[13px]">4–6 weeks, working pilot</p>
+        <ul class="mt-4 space-y-1.5 body-sm text-ink/85 list-disc pl-5 marker:text-forest/60">
+          <li>Use-case scoping and evaluation</li>
+          <li>RAG or agent build</li>
+          <li>API and UI integration</li>
+          <li>Handover and enablement</li>
         </ul>
         <div class="dashed my-5"></div>
-        <p class="text-sm"><span class="eyebrow">Outcome:</span> <span class="ml-1">working AI feature in production.</span></p>
+        <p class="text-[13px]"><span class="eyebrow">Outcome</span> <span class="ml-1 text-ink/85">— a working AI feature in production.</span></p>
       </article>
 
       <article class="card p-6 rounded-sm flex flex-col">
-        <div class="text-forest/70 font-semibold text-sm">Package 03</div>
-        <h3 class="mt-2 text-xl font-extrabold">Lead Architect / Fractional</h3>
-        <p class="mt-1 text-ink/70 text-sm">Monthly retainer, 1–3 days / week</p>
-        <ul class="mt-4 space-y-2 text-[15px] text-ink/85 leading-relaxed list-disc pl-5">
-          <li>Architecture &amp; AI strategy</li>
-          <li>Hands-on review &amp; prototypes</li>
-          <li>Vendor &amp; platform selection</li>
+        <div class="text-forest/70 font-semibold text-xs tracking-widest">Package 03</div>
+        <h3 class="mt-1.5 text-lg font-extrabold">Lead Architect &middot; Fractional</h3>
+        <p class="mt-1 text-ink/65 text-[13px]">Monthly retainer, 1–3 days / week</p>
+        <ul class="mt-4 space-y-1.5 body-sm text-ink/85 list-disc pl-5 marker:text-forest/60">
+          <li>Architecture and AI strategy</li>
+          <li>Hands-on review and prototypes</li>
+          <li>Vendor and platform selection</li>
           <li>Coaching tech leads</li>
         </ul>
         <div class="dashed my-5"></div>
-        <p class="text-sm"><span class="eyebrow">Outcome:</span> <span class="ml-1">shipping capability, not slides.</span></p>
+        <p class="text-[13px]"><span class="eyebrow">Outcome</span> <span class="ml-1 text-ink/85">— shipping capability, not slides.</span></p>
       </article>
 
     </div>
   </section>
 
   <!-- CLIENTS -->
-  <section class="mt-16">
-    <h2 class="eyebrow">Selected clients I've worked with</h2>
-    <p class="mt-4 text-lg sm:text-xl text-ink/85 leading-relaxed">
-      Swedavia <span class="text-forest/50 mx-1">|</span>
-      Volvo <span class="text-forest/50 mx-1">|</span>
-      IKEA <span class="text-forest/50 mx-1">|</span>
-      Securitas <span class="text-forest/50 mx-1">|</span>
-      Médecins Sans Frontières <span class="text-forest/50 mx-1">|</span>
-      Capgemini <span class="text-forest/50 mx-1">|</span>
-      CGI <span class="text-forest/50 mx-1">|</span>
-      Sony Mobile <span class="text-forest/50 mx-1">|</span>
-      DSB <span class="text-forest/50 mx-1">|</span>
-      UDDA <span class="text-forest/50 mx-1">|</span>
-      City of Malmö <span class="text-forest/50 mx-1">|</span>
-      HiQ <span class="text-forest/50 mx-1">|</span>
-      UNESCO <span class="text-forest/50 mx-1">|</span>
+  <section class="mt-12">
+    <h2 class="eyebrow">Selected clients</h2>
+    <p class="mt-3 body text-ink/85">
+      Swedavia <span class="text-forest/40 mx-1.5">|</span>
+      Volvo <span class="text-forest/40 mx-1.5">|</span>
+      IKEA <span class="text-forest/40 mx-1.5">|</span>
+      Securitas <span class="text-forest/40 mx-1.5">|</span>
+      Médecins Sans Frontières <span class="text-forest/40 mx-1.5">|</span>
+      Capgemini <span class="text-forest/40 mx-1.5">|</span>
+      CGI <span class="text-forest/40 mx-1.5">|</span>
+      Sony Mobile <span class="text-forest/40 mx-1.5">|</span>
+      DSB <span class="text-forest/40 mx-1.5">|</span>
+      UDDA <span class="text-forest/40 mx-1.5">|</span>
+      City of Malmö <span class="text-forest/40 mx-1.5">|</span>
+      HiQ <span class="text-forest/40 mx-1.5">|</span>
+      UNESCO <span class="text-forest/40 mx-1.5">|</span>
       Lummelunda Technology
     </p>
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="mt-16">
-    <h2 class="eyebrow">Experience — the relevant bits</h2>
-    <div class="mt-6 divide-y divide-forest/15">
-      <!-- row template -->
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2026 — now</div>
+  <section class="mt-12">
+    <h2 class="eyebrow">Experience — the relevant parts</h2>
+    <div class="mt-4 divide-y divide-forest/15">
+
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2026 — now</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Lead Architect · Swedavia</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Total Airport Management. Real-time situational picture across airside, landside, terminal and security. Integration across AODB, A-CDM and stakeholder systems.</p>
+          <div class="role-title font-bold">Lead Architect · Swedavia</div>
+          <p class="mt-1 body-sm text-ink/80">Total Airport Management. Real-time situational picture across airside, landside, terminal and security, with integration over AODB, A-CDM and stakeholder systems.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2025 — 2026</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2025 — 2026</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Architect &amp; AI Developer · UDDA</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Hands-on AI for a generative-AI startup. LLMs, RAG, agents (function calling, MCP), prompt engineering and eval. AI-assisted development with Claude Code and Cursor.</p>
+          <div class="role-title font-bold">Architect &amp; AI Developer · UDDA</div>
+          <p class="mt-1 body-sm text-ink/80">Hands-on AI for a generative-AI startup: LLMs, RAG, agents (function calling, MCP), prompt engineering and evaluation. AI-assisted development with Claude Code and Cursor.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2024 — 2025</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2024 — 2025</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Integration Specialist &amp; Solution Architect · City of Malmö</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Student information system. GDPR-by-design across integrations and data flows.</p>
+          <div class="role-title font-bold">Integration Specialist &amp; Solution Architect · City of Malmö</div>
+          <p class="mt-1 body-sm text-ink/80">Student information system with GDPR-by-design across integrations and data flows.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2022 — 2024</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2022 — 2024</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Solution Architect &amp; Team Lead · Volvo Connected Services</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Easy Connect WiFi for Volvo Penta. Azure IoT Hub, Logic Apps, Service Bus. Millions of telemetry events per day. Rating: EXCELLENT.</p>
+          <div class="role-title font-bold">Solution Architect &amp; Team Lead · Volvo Connected Services</div>
+          <p class="mt-1 body-sm text-ink/80">Easy Connect WiFi for Volvo Penta on Azure IoT Hub, Logic Apps and Service Bus — millions of telemetry events per day. Final rating: Excellent.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2019 — 2022</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2019 — 2022</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Founder &amp; CTO · Lummelunda Technology</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Cleantech IoT. End-to-end edge → cloud, multi-tenant platform.</p>
+          <div class="role-title font-bold">Founder &amp; CTO · Lummelunda Technology</div>
+          <p class="mt-1 body-sm text-ink/80">Cleantech IoT. End-to-end edge-to-cloud, multi-tenant platform.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2017 — 2018</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2017 — 2018</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Integration Specialist &amp; Area Manager · HiQ</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">75% complexity reduction for customers across integration estates.</p>
+          <div class="role-title font-bold">Integration Specialist &amp; Area Manager · HiQ</div>
+          <p class="mt-1 body-sm text-ink/80">Reduced integration complexity by 75% across customer estates.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2014 — 2017</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2014 — 2017</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">EA Architect &amp; IT Strategy Advisor · Médecins Sans Frontières</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Global health information across 5 operational centres. Co-author, Lancet Global Health.</p>
+          <div class="role-title font-bold">EA Architect &amp; IT Strategy Advisor · Médecins Sans Frontières</div>
+          <p class="mt-1 body-sm text-ink/80">Global health information across five operational centres. Co-author, Lancet Global Health.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2012 — 2014</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2012 — 2014</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Integration Architect · Securitas</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Pan-European B2B across 12 national markets.</p>
+          <div class="role-title font-bold">Integration Architect · Securitas</div>
+          <p class="mt-1 body-sm text-ink/80">Pan-European B2B integrations across twelve national markets.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2010 — 2011</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2010 — 2011</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Lead Architect · CGI</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">European energy market. 65 developers offshore / onshore. Nord Pool.</p>
+          <div class="role-title font-bold">Lead Architect · CGI</div>
+          <p class="mt-1 body-sm text-ink/80">European energy market with 65 developers offshore and onshore — Nord Pool.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2009 — 2010</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2009 — 2010</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Infrastructure Architect · IKEA</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Global retail web.</p>
+          <div class="role-title font-bold">Infrastructure Architect · IKEA</div>
+          <p class="mt-1 body-sm text-ink/80">Global retail web.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2006 — 2010</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2006 — 2010</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Senior Technical Consultant · Capgemini</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">Sony Mobile, DSB. Source and configuration management.</p>
+          <div class="role-title font-bold">Senior Technical Consultant · Capgemini</div>
+          <p class="mt-1 body-sm text-ink/80">Sony Mobile, DSB — source and configuration management.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-12 gap-4 py-5">
-        <div class="col-span-12 md:col-span-3 text-sm font-semibold text-forest">2003 — 2004</div>
+      <div class="grid grid-cols-12 gap-4 py-4">
+        <div class="col-span-12 md:col-span-3 text-[13px] font-semibold text-forest tracking-wide">2003 — 2004</div>
         <div class="col-span-12 md:col-span-9">
-          <div class="font-bold text-lg">Infrastructure Developer &amp; Trainer · UNESCO</div>
-          <p class="mt-1 text-ink/80 leading-relaxed">8 stations across Sri Lanka and India.</p>
+          <div class="role-title font-bold">Infrastructure Developer &amp; Trainer · UNESCO</div>
+          <p class="mt-1 body-sm text-ink/80">Built and trained operators for eight stations across Sri Lanka and India.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- TECH + EDUCATION -->
-  <section class="mt-16 grid md:grid-cols-2 gap-12">
+  <section class="mt-12 grid md:grid-cols-2 gap-10">
     <div>
       <h2 class="eyebrow">Tech stack</h2>
-      <dl class="mt-5 space-y-3 text-[15px] leading-relaxed">
+      <dl class="mt-4 space-y-2.5 body-sm">
         <div class="grid grid-cols-12 gap-3">
           <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">Architecture</dt>
           <dd class="col-span-12 sm:col-span-8 text-ink/85">TOGAF, ArchiMate, C4, DDD, Event Sourcing, CQRS</dd>
         </div>
         <div class="grid grid-cols-12 gap-3">
-          <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">AI / LLM</dt>
+          <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">AI &amp; LLM</dt>
           <dd class="col-span-12 sm:col-span-8 text-ink/85">Claude (Anthropic), OpenAI, open-source LLMs, agent frameworks, function calling</dd>
         </div>
         <div class="grid grid-cols-12 gap-3">
@@ -311,8 +325,8 @@
           <dd class="col-span-12 sm:col-span-8 text-ink/85">RAG pipelines, embeddings, pgvector, Pinecone, MCP</dd>
         </div>
         <div class="grid grid-cols-12 gap-3">
-          <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">Dev</dt>
-          <dd class="col-span-12 sm:col-span-8 text-ink/85">C# / .NET, TypeScript, Node.js, Python, React, Next.js, full-stack &amp; APIs</dd>
+          <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">Development</dt>
+          <dd class="col-span-12 sm:col-span-8 text-ink/85">C#/.NET, TypeScript, Node.js, Python, React, Next.js, full-stack and APIs</dd>
         </div>
         <div class="grid grid-cols-12 gap-3">
           <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">Cloud</dt>
@@ -330,57 +344,61 @@
           <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">Tools</dt>
           <dd class="col-span-12 sm:col-span-8 text-ink/85">Claude Code, Cursor, GitHub Copilot, VS Code, Enterprise Architect, Miro, Figma</dd>
         </div>
+        <div class="grid grid-cols-12 gap-3">
+          <dt class="col-span-12 sm:col-span-4 font-semibold text-forest">Modelling</dt>
+          <dd class="col-span-12 sm:col-span-8 text-ink/85">Visualisation and facilitation that turn complex landscapes into shared pictures stakeholders can act on.</dd>
+        </div>
       </dl>
     </div>
 
     <div>
       <h2 class="eyebrow">Education &amp; languages</h2>
-      <ul class="mt-5 space-y-4 text-[15px] leading-relaxed">
+      <ul class="mt-4 space-y-3 body-sm">
         <li>
           <div class="font-semibold">MSc Interaction Technology — Malmö University</div>
-          <div class="text-ink/75">2001 – 2003 · HCI, user-centered design, information design.</div>
+          <div class="text-ink/70">2001 – 2003. HCI, user-centered design, information design.</div>
         </li>
         <li>
           <div class="font-semibold">Database Development — Lund University</div>
-          <div class="text-ink/75">2002.</div>
+          <div class="text-ink/70">2002.</div>
         </li>
         <li>
           <div class="font-semibold">Computer Science — Mälardalen University</div>
-          <div class="text-ink/75">1999 – 2001.</div>
+          <div class="text-ink/70">1999 – 2001.</div>
         </li>
         <li>
           <div class="font-semibold">Web Programming — Malmö University</div>
-          <div class="text-ink/75">2002.</div>
+          <div class="text-ink/70">2002.</div>
         </li>
         <li>
           <div class="font-semibold">Languages</div>
-          <div class="text-ink/75">Swedish (native) · English (full professional).</div>
+          <div class="text-ink/70">Swedish (native) · English (full professional).</div>
         </li>
         <li>
           <div class="font-semibold">Publication</div>
-          <div class="text-ink/75">Co-author, Lancet Global Health — medical data management in humanitarian settings (MSF).</div>
+          <div class="text-ink/70">Co-author, Lancet Global Health — medical data management in humanitarian settings (MSF).</div>
         </li>
       </ul>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="mt-16">
+  <section class="mt-14">
     <div class="rounded-sm p-8 sm:p-10" style="background:#34493F;color:#F3ECDF">
-      <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Start the conversation</h2>
-      <p class="mt-3 max-w-2xl text-cream/90 text-lg leading-relaxed">
-        30-minute intro call. Bring the problem — I'll bring a first take on architecture, AI approach or where to start.
+      <h2 class="text-[28px] sm:text-[32px] font-extrabold leading-tight tracking-tight">Start the conversation</h2>
+      <p class="mt-3 max-w-2xl text-cream/90 body">
+        A 30-minute intro call. Bring the problem — I'll bring a first take on architecture, AI approach or where to start.
       </p>
-      <div class="mt-7 flex flex-wrap gap-3">
-        <a href="mailto:claes-philip@staiger.se" class="inline-flex items-center rounded-sm px-5 py-3 font-semibold" style="background:#F3ECDF;color:#34493F">Email Claes-Philip</a>
-        <a href="https://linkedin.com/in/claesphilipstaiger" target="_blank" rel="noopener" class="inline-flex items-center rounded-sm px-5 py-3 font-semibold border-2 border-cream text-cream hover:bg-cream/10">LinkedIn</a>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="mailto:claes-philip@staiger.se" class="inline-flex items-center rounded-sm px-5 py-2.5 font-semibold text-[14px]" style="background:#F3ECDF;color:#34493F">Email Claes-Philip</a>
+        <a href="https://linkedin.com/in/claesphilipstaiger" target="_blank" rel="noopener" class="inline-flex items-center rounded-sm px-5 py-2.5 font-semibold text-[14px] border border-cream/80 text-cream hover:bg-cream/10">LinkedIn</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="mt-12 text-center text-sm text-ink/60">
-    Claes-Philip Staiger · Stockholm / Visby, Sweden · Updated <span id="updated">May 2026</span>
+  <footer class="mt-10 text-center text-[12px] text-ink/55 tracking-wide">
+    Claes-Philip Staiger · Visby / Stockholm, Sweden · Updated <span id="updated">May 2026</span>
   </footer>
 
 </main>
