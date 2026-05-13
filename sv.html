@@ -46,7 +46,15 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
   }
 
-  .topbar { display: flex; justify-content: flex-end; margin-bottom: 14px; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .pdf-btn {
+    background: transparent; border: 1px solid var(--rule); color: var(--ink-soft);
+    padding: 4px 11px; border-radius: 999px;
+    font-family: inherit; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer; transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .pdf-btn:hover { color: var(--forest); border-color: var(--forest); background: var(--bg); }
   .locale { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
   .locale a {
     padding: 2px 4px; font: inherit; color: var(--muted); text-decoration: none;
@@ -197,9 +205,96 @@
     .avatar { width: 36px; height: 36px; }
   }
   @media print {
-    body { background: #fff; box-shadow: none; }
-    .page { box-shadow: none; max-width: none; padding: 24px 28px; margin: 0; }
-    .topbar { display: none; }
+    @page { size: A4; margin: 18mm 20mm; }
+    *, *::before, *::after {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    html, body {
+      background: #FFFFFF !important;
+      box-shadow: none !important;
+      font-size: 10.5pt;
+    }
+    .page { background: #FFFFFF !important; }
+    .page {
+      max-width: none !important; margin: 0 !important; padding: 0 !important;
+      min-height: 0 !important; box-shadow: none !important;
+    }
+    .topbar { display: none !important; }
+    .name { font-size: 26pt; }
+    .role-main { font-size: 11pt; }
+    .role-sub { font-size: 9.5pt; }
+    .contact { font-size: 9pt; }
+    .hero { font-size: 12pt; line-height: 16pt; }
+    .hero-sub { font-size: 9.5pt; }
+    .section { margin-top: 18px; }
+    .section-title { font-size: 8.5pt; margin-bottom: 8px; }
+    main > section:has(.exp) { margin-top: 28px; }
+    .strip {
+      display: block !important;
+      gap: 0 !important;
+      margin: 14px 0 18px !important;
+    }
+    .chip {
+      display: inline !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      font-size: 9pt !important;
+      font-weight: 500 !important;
+      color: var(--ink-soft) !important;
+    }
+    .chip::after {
+      content: " · ";
+      color: var(--muted);
+      margin: 0 4px;
+    }
+    .chip:last-of-type::after { content: ""; }
+    .chip.dot::before {
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--forest) !important;
+      margin-right: 5px;
+      content: "";
+    }
+    .hero { margin: 6px 0 12px; }
+    .hero-sub { margin-bottom: 0; }
+    .pillar, .pkg { break-inside: avoid; page-break-inside: avoid; }
+    .pillar { background: transparent !important; border: 1px solid var(--rule) !important; border-left: 3px solid var(--forest) !important; padding: 14px 16px 16px; }
+    .pkg { background: transparent !important; border-color: var(--rule) !important; padding: 10px 12px 12px; }
+    .pkg .tag { font-size: 8pt; }
+    .pkg h3 { font-size: 9.5pt; line-height: 1.18; margin: 2px 0 1px; }
+    .pkg .dur { font-size: 8pt; margin-bottom: 6px; }
+    .pkg p { font-size: 8pt; margin: 0 0 6px; line-height: 1.35; }
+    .pkg ul { font-size: 7.5pt; }
+    .pkg ul li { margin-bottom: 2px; line-height: 1.3; padding-left: 10px; }
+    .pkg .outcome { font-size: 7.5pt; padding-top: 6px; margin-top: 6px; }
+    .pdf-break {
+      break-before: page !important;
+      page-break-before: always !important;
+      margin-top: 0 !important;
+    }
+    .pillar .num, .pkg .tag { color: var(--ochre) !important; }
+    .pillar h3, .pkg h3 { font-size: 11pt; }
+    .pillar p, .pkg p { font-size: 9pt; }
+    .pkg ul, .pkg .outcome { font-size: 8.5pt; }
+    .exp { font-size: 9.5pt; gap: 8px 14px; }
+    .exp .yr { font-size: 8.5pt; }
+    .exp .row { break-inside: avoid; page-break-inside: avoid; }
+    .stack-grid, .edu, .brands { font-size: 9pt; }
+    .stack-grid .k { font-size: 8.5pt; }
+    .cta { display: none !important; }
+    .foot { font-size: 8pt; margin-top: 10px; }
+    a { text-decoration: none; border-bottom: none !important; }
+    body { box-shadow: none !important; }
+    .avatar {
+      box-shadow: none !important;
+      background-color: transparent !important;
+      clip-path: circle(50%);
+      -webkit-clip-path: circle(50%);
+    }
   }
 </style>
 </head>
@@ -207,6 +302,7 @@
 <main class="page">
 
   <div class="topbar">
+    <button class="pdf-btn" type="button" onclick="window.print()" aria-label="Spara som PDF">↓ Spara som PDF</button>
     <nav class="locale" aria-label="Språk">
       <a href="/">EN</a>
       <span aria-hidden="true">·</span>
@@ -322,7 +418,7 @@
   </section>
 
   <!-- CLIENTS -->
-  <section class="section">
+  <section class="section pdf-break">
     <h2 class="section-title">Utvalda kunder</h2>
     <div class="brands">
       <span>Swedavia</span><span>Volvo</span><span>IKEA</span><span>Securitas</span>
@@ -375,7 +471,7 @@
   </section>
 
   <!-- STACK + EDUCATION -->
-  <div class="twocol">
+  <div class="twocol pdf-break">
     <section class="section">
       <h2 class="section-title">Tech stack</h2>
       <div class="stack-grid">
